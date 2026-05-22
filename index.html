@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photo Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="gallery.js">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-dot"></span>
+        <span class="logo-text">LENS<em>folio</em></span>
+      </div>
+      <p class="header-tagline">A curated visual collection</p>
+    </div>
+  </header>
+
+  <!-- Filter Bar -->
+  <section class="filter-section">
+    <div class="filter-inner">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="nature">Nature</button>
+      <button class="filter-btn" data-filter="architecture">Architecture</button>
+      <button class="filter-btn" data-filter="travel">Travel</button>
+      <button class="filter-btn" data-filter="abstract">Abstract</button>
+    </div>
+  </section>
+
+  <!-- Gallery Grid -->
+  <main class="gallery-wrapper">
+    <div class="gallery-grid" id="galleryGrid">
+
+      <div class="gallery-item" data-category="nature" data-index="0">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Mountain landscape at sunrise" loading="lazy" />
+          <div class="img-overlay">
+            <div class="overlay-text">
+              <span class="overlay-cat">Nature</span>
+              <h3>Mountain Sunrise</h3>
+            </div>
+            <button class="zoom-btn" aria-label="Open image">&#x2B1C;</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item tall" data-category="architecture" data-index="1">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80" alt="Modern glass building facade" loading="lazy" />
+          <div class="img-overlay">
+            <div class="overlay-text">
+              <span class="overlay-cat">Architecture</span>
+              <h3>Glass & Steel</h3>
+            </div>
+            <button class="zoom-btn" aria-label="Open image">&#x2B1C;</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="travel" data-index="2">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=600&q=80" alt="Santorini white buildings" loading="lazy" />
+          <div class="img-overlay">
+            <div class="overlay-text">
+              <span class="overlay-cat">Travel</span>
+              <h3>Santorini Blues</h3>
+            </div>
+            <button class="zoom-btn" aria-label="Open image">&#x2B1C;</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item wide" data-category="abstract" data-index="3">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1557672172-298e090bd0f1?w=900&q=80" alt="Colorful abstract paint texture" loading="lazy" />
+          <div class="img-overlay">
+            <div class="overlay-text">
+              <span class="overlay-cat">Abstract</span>
+              <h3>Color Theory</h3>
+            </div>
+            <button class="zoom-btn" aria-label="Open image">&#x2B1C;</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="nature" data-index="4">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&q=80" alt="Forest path with sunlight" loading="lazy" />
+          <div class="img-overlay">
+            <div class="overlay-text">
+              <span class="overlay-cat">Nature</span>
+              <h3>Into the Woods</h3>
+            </div>
+            <button class="zoom-btn" aria-label="Open image">&#x2B1C;</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="architecture" data-index="5">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=600&q=80" alt="Spiral staircase from above" loading="lazy" />
+          <div class="img-overlay">
+            <div class="overlay-text">
+              <span class="overlay-cat">Architecture</span>
+              <h3>The Spiral</h3>
+            </div>
+            <button class="zoom-btn" aria-label="Open image">&#x2B1C;</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item tall" data-category="travel" data-index="6">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&q=80" alt="Japanese temple path" loading="lazy" />
+          <div class="img-overlay">
+            <div class="overlay-text">
+              <span class="overlay-cat">Travel</span>
+              <h3>Kyoto Path</h3>
+            </div>
+            <button class="zoom-btn" aria-label="Open image">&#x2B1C;</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="abstract" data-index="7">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&q=80" alt="Abstract liquid art" loading="lazy" />
+          <div class="img-overlay">
+            <div class="overlay-text">
+              <span class="overlay-cat">Abstract</span>
+              <h3>Liquid Dreams</h3>
+            </div>
+            <button class="zoom-btn" aria-label="Open image">&#x2B1C;</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="nature" data-index="8">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&q=80" alt="Waterfall in nature" loading="lazy" />
+          <div class="img-overlay">
+            <div class="overlay-text">
+              <span class="overlay-cat">Nature</span>
+              <h3>Hidden Falls</h3>
+            </div>
+            <button class="zoom-btn" aria-label="Open image">&#x2B1C;</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Empty state -->
+    <div class="no-results" id="noResults">
+      <p>No images found in this category.</p>
+    </div>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-container">
+      <button class="lb-close" id="lbClose" aria-label="Close">&times;</button>
+      <button class="lb-prev" id="lbPrev" aria-label="Previous image">&#8592;</button>
+      <button class="lb-next" id="lbNext" aria-label="Next image">&#8594;</button>
+      <div class="lb-img-wrap">
+        <img src="" alt="" id="lbImage" />
+      </div>
+      <div class="lb-caption">
+        <span class="lb-cat" id="lbCat"></span>
+        <h2 class="lb-title" id="lbTitle"></h2>
+        <span class="lb-counter" id="lbCounter"></span>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 LENSfolio &mdash; All images via Unsplash</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
